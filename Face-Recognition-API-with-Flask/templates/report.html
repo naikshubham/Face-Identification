@@ -1,0 +1,17 @@
+<!DOCTYPE=html>
+<html>
+<head>
+    <title>
+        Result
+    </title>
+    <link rel="stylesheet" href="static/hf.css" />
+</head>
+<h2>{{ the_title }}</h2>
+<body>
+    {{first_event}} to {{second_event}}
+    {% for hist in hists %}
+    <img src="{{url_for('static', filename=hist)}}" alt="{{hist}}">
+    <!-- <img src="static/{{hist}}" alt="{{hist}}"> -->
+    {% endfor %}
+</body>
+</html>
